@@ -5,15 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Grf - Finanças</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="/vendors/feather/feather.css">
-  <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
+  <title>Grf - Finanças</title> 
   <link rel="stylesheet" type="text/css" href="/js/select.dataTables.min.css">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
@@ -90,35 +82,22 @@
           
           <span class="nav-item--title-divisor">Finanças</span>
   
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="icon-plus menu-icon" style="margin-bottom:7px"></i>
-              <span class="menu-title">Adicionar</span>
-              <i  class="menu-arrow"></i>
+          
+            <li class="nav-item">
+            <a class="nav-link" href="/nova_financa">
+              <i class="fa-regular fa-tags menu-icon" style="margin-bottom:2px;font-size:17px;margin-right:12px;margin-left:-3px"></i>
+              <span class="menu-title"> Nova finança</span>
             </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column" style="margin: 0 0 0 20px">
-                <li class="nav-item">
-                  <a class="nav-link" href="/nova_financa">
-                      <i class="icon-plus menu-icon" style="margin-bottom:8px"></i>
-                      Nova finança 
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/nova_categoria">
-                      <i class="icon-plus menu-icon" style="margin-bottom:8px"></i>
-                      Nova categoria 
-                  </a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="/nova_financa_fixa">
-                      <i class="icon-plus menu-icon" style="margin-bottom:8px"></i>
-                      Nova finança fixa 
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
+              <li class="nav-item">
+            <a class="nav-link" href="/nova_categoria">
+              <i class="fa-regular fa-tags menu-icon" style="margin-bottom:2px;font-size:17px;margin-right:12px;margin-left:-3px"></i>
+              <span class="menu-title">Nova categoria </span>
+            </a>
+              <li class="nav-item">
+            <a class="nav-link" href="/nova_financa_fixa">
+              <i class="fa-regular fa-tags menu-icon" style="margin-bottom:2px;font-size:17px;margin-right:12px;margin-left:-3px"></i>
+              <span class="menu-title">Nova finança fixa </span>
+            </a>
           <li class="nav-item">
             <a class="nav-link" href="/categorias">
               <i class="fa-regular fa-tags menu-icon" style="margin-bottom:2px;font-size:17px;margin-right:12px;margin-left:-3px"></i>
@@ -143,28 +122,17 @@
               <span class="menu-title">Despesas fixas</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements-2" aria-expanded="false" aria-controls="form-elements-2">
-              <i class="fa-solid fa-network-wired  menu-icon" style="margin-bottom:2px;font-size:17px;margin-right:12px;margin-left:-3px"></i>
-              <span class="menu-title">Integrações</span>
-              <i  class="menu-arrow"></i>
+         <li class="nav-item">
+            <a class="nav-link" href="/importacao">
+                <i class="icon-cloud-upload menu-icon" style="margin-bottom:5px;font-size:20px"></i>
+                Importar
             </a>
-            <div class="collapse" id="form-elements-2">
-              <ul class="nav flex-column" style="margin: 0 0 0 20px">
-                <li class="nav-item">
-                  <a class="nav-link" href="/importacao">
-                      <i class="icon-cloud-upload menu-icon" style="margin-bottom:5px;font-size:20px"></i>
-                      Importar
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/exportacao">
-                    <i class="icon-cloud-download menu-icon" style="margin-bottom:5px;font-size:20px"></i>
-                    Exportar
-                  </a>
-                </li>
-              </ul>
-            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/exportacao">
+              <i class="icon-cloud-download menu-icon" style="margin-bottom:5px;font-size:20px"></i>
+              Exportar
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/trash">
@@ -176,27 +144,10 @@
           <span style="margin-top: 27px" class="nav-item--title-divisor">Receitas</span>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#receitas" aria-expanded="false" aria-controls="receitas">
-              <i class="icon-plus menu-icon" style="margin-bottom:7px"></i>
-              <span class="menu-title">Adicionar</span>
-              <i  class="menu-arrow"></i>
+            <a class="nav-link" href="/nova_conta">
+                 <i class="fa-plus fa-solid  menu-icon" style="margin-bottom:2px;font-size:17.5px;margin-right:15px;margin-left:-1px"></i>
+                  <span class="menu-title">Nova conta</span>
             </a>
-            <div class="collapse" id="receitas">
-              <ul class="nav flex-column" style="margin: 0 0 0 20px">
-                <li class="nav-item">
-                  <a class="nav-link" href="/nova_conta">
-                      <i class="icon-plus menu-icon" style="margin-bottom:8px"></i>
-                      Nova conta 
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/nova_receita">
-                      <i class="icon-plus menu-icon" style="margin-bottom:8px"></i>
-                      Nova receita 
-                  </a>
-                </li> 
-              </ul>
-            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contas">
@@ -204,6 +155,12 @@
               <span class="menu-title">Contas</span> 
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nova_receita">
+                <i class="fa-plus fa-solid  menu-icon" style="margin-bottom:2px;font-size:17.5px;margin-right:15px;margin-left:-1px"></i>
+                <span class="menu-title">Nova receita </span>
+            </a>
+          </li> 
            <li class="nav-item">
             <a class="nav-link" href="/rcts">
               <i class="fa-solid fa-hand-holding-dollar menu-icon" style="margin-bottom:2px;font-size:17.5px;margin-right:15px;margin-left:-1px"></i>
@@ -231,25 +188,19 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-  <script src="/vendors/js/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <script src="/vendors/chart.js/Chart.min.js"></script>
-  <script src="/vendors/datatables.net/jquery.dataTables.js"></script>
-  <script src="/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-  <script src="js/dataTables.select.min.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- endinject --> 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/template.js"></script>
-  <script src="js/settings.js"></script>
-  <script src="js/todolist.js"></script>
+  <script src="/js/off-canvas.js"></script>
+  <script src="/js/hoverable-collapse.js"></script>
+  <script src="/js/template.js"></script>
+  <script src="/js/settings.js"></script>
+  <script src="/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="js/dashboard.js"></script>
-  <script src="js/Chart.roundedBarCharts.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <script src="/js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page--><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 

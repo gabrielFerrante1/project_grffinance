@@ -1,0 +1,70 @@
+on:
+  push:
+    branches: [master]
+name: 🚀 Deploy Laravel Project on Push
+
+jobs:
+  build-and-deploy:
+    name: 🎉 Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixar o Código
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      # 2. Instalar Dependências do PHP
+      - name: 🐘 Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+
+      # 3. Deploy via SFTP Somente da Pasta `public`
+      - name: 📂 Sync project via SFTP
+        uses: Dylan700/sftp-upload-action@v1.2.3
+        with:
+          server: ${{ secrets.sftp_host }}
+          username: ${{ secrets.sftp_username }}
+          key: ${{ secrets.sftp_private_key }}
+          passphrase: ${{ secrets.sftp_passphrase }}
+          port: ${{ secrets.sftp_port }}
+          uploads: |
+            ./ => ./financas.cafeferrante.com
+          ignore: |
+            *.git
+            *.github
+            .git/**
+            vendor/**
+            github/**
+            *.gitignore
+            *.gitattributes
+            *.editorconfig
+          
+      # 4. Executar Composer Install no Servidor
+      - name: 🚀 Run Composer Install, Optimize and cache on Server
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.sftp_host }}
+          username: ${{ secrets.ssh_username }}
+          key: ${{ secrets.sftp_private_key }}
+          passphrase: ${{ secrets.sftp_passphrase }}
+          port: ${{ secrets.sftp_port }}
+          script_stop: true
+          script: |
+            cd ../../var/www/financas.cafeferrante.com
+            rm -rf composer.lock
+            composer install --no-interaction --prefer-dist --optimize-autoloader
+            
+            # Limpar caches
+            php artisan config:clear
+            php artisan route:clear
+            php artisan view:clear
+            php artisan optimize:clear
+
+            # Otimizar o autoloader e a configuração
+            php artisan optimize
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+
+            composer dump-autoload --optimize

@@ -7,9 +7,9 @@
 
 @section('content')
 
-<script src="/dist/winbox.bundle.js"></script>
-<link rel="stylesheet" href="/dist/css/winbox.min.css">
-<script src="/dist/js/winbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/winbox.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/js/winbox.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/css/winbox.min.css">
 
  
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
