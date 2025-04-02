@@ -52,9 +52,7 @@ jobs:
           script_stop: true
           script: |
             cd ../../var/www/financas.cafeferrante.com
-            rm -rf composer.lock
-            composer install --no-interaction --prefer-dist --optimize-autoloader
-            
+                        
             # Limpar caches
             php artisan config:clear
             php artisan route:clear
