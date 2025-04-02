@@ -37,6 +37,7 @@ jobs:
             vendor/**
             github/**
             node_modules/**
+            public/vendors/**
             *.gitignore
             *.gitattributes
             *.editorconfig
